@@ -1,10 +1,9 @@
 .background-shape {
   position: absolute;
-  overflow: hidden;
-  height: 60vh;
+  height: 70vh;
   width: 100%;
   background: linear-gradient(to bottom, var(--primary-color), var(--primary-color));
-  clip-path: polygon(0% 0%, 100% 0%, 95% 75%, 0% 100%);
+  clip-path: polygon(100% 100%, 0% 100%, 3% 44%, 100% 0%);
   z-index: 0;
 }
 

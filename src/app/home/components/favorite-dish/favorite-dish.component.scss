@@ -1,0 +1,36 @@
+.favorite-dish {
+  padding: var(--common-padding);
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.favorite-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  max-width: 25%;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border: 5px solid var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+              0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-image {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.info-description {
+  text-align: center;
+}

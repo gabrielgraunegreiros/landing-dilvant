@@ -9,23 +9,23 @@ export class PopularReceiptsComponent {
   receiptsResponse = [
     {
       title: 'Postres peruanos',
-      imgPath: 'assets/images/postre.svg'
+      imgPath: 'assets/images/popular-receipts/postre.svg'
     },
     {
       title: 'Causa Rellena',
-      imgPath: 'assets/images/causa.svg'
+      imgPath: 'assets/images/popular-receipts/causa.svg'
     },
     {
       title: 'Ají de Gallina',
-      imgPath: 'assets/images/lomo.svg'
+      imgPath: 'assets/images/popular-receipts/lomo.svg'
     },
     {
       title: 'Pisco Sour',
-      imgPath: 'assets/images/sour.svg'
+      imgPath: 'assets/images/popular-receipts/sour.svg'
     },
     {
       title: 'Ceviche',
-      imgPath: 'assets/images/ceviche.svg'
+      imgPath: 'assets/images/popular-receipts/ceviche.svg'
     },
   ];
 

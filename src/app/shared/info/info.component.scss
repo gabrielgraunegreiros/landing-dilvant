@@ -1,0 +1,21 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.revert {
+    flex-direction: row-reverse;
+  }
+}
+
+.info-article {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.dish-image {
+  border-radius: 63px;
+  overflow: hidden;
+}

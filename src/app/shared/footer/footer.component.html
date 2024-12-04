@@ -1,0 +1,13 @@
+<footer class="footer">
+  <div class="footer-info">
+    <h2 class="brand">Dilvant</h2>
+    <ul *ngFor="let list of footerInfo">
+      <p class="list-title">{{list.title}}</p>
+      <li *ngFor="let element of list.elements" class="list-element">{{element}}</li>
+    </ul>
+  </div>
+  <hr>
+  <div class="copyright">
+    <p>Plantilla hecha por Dilvant - 2024</p>
+  </div>
+</footer>

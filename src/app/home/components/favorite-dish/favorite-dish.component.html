@@ -1,0 +1,11 @@
+<section class="favorite-dish">
+  <h1 class="favorite-dish-title">¿Cómo funciona? Elige tu plato favorito.</h1>
+  <div class="favorite-info">
+    <div *ngFor="let info of favoriteDishesResponse" class="info">
+      <div class="info-image">
+        <img [src]="info.imgPath" alt="favorite-img">
+      </div>
+      <p class="info-description secondary-text">{{info.description}}</p>
+    </div>
+  </div>
+</section>
