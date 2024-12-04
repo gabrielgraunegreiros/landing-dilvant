@@ -6,9 +6,7 @@
 }
 
 .footer-info {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 48px;
+  display: flex;
   padding: 48px 0;
 }
 
@@ -25,9 +23,32 @@
   padding-bottom: .5rem;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    word-wrap: break-word;
+  }
+}
+
 .copyright {
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 24px 0;
+}
+
+@media (max-width: 991px) {
+  .footer-info {
+    flex-direction: column;
+  }
+
+  .ul-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .col-lg-3 {
+    padding-bottom: 1.5rem;
+  }
 }

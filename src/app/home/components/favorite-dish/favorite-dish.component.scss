@@ -14,16 +14,21 @@
 }
 
 .info {
-  max-width: 25%;
   padding: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  justify-content: space-between;
   border: 5px solid var(--primary-color);
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
               0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5),
+                0 4px 6px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .info-image {
@@ -33,4 +38,18 @@
 
 .info-description {
   text-align: center;
+}
+
+@media (max-width: 991px) {
+  .favorite-dish {
+    gap: 20px;
+  }
+
+  .favorite-dish-title {
+    text-align: center;
+  }
+  .favorite-info {
+    flex-direction: column;
+    gap: 16px;
+  }
 }

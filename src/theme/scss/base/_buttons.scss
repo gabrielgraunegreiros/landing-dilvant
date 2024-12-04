@@ -8,20 +8,29 @@
   width: fit-content;
 
   &.btn-primary {
-    padding: $primary-btn-padding;
-    font-size: 1.5rem;
+    padding: var(--primary-btn-padding);
+    font-size: calc(var(--font-size) * var(--font-size-multiplier-m));
     background-color: transparent;
     color: $secondary-color;
+    &:hover {
+      background-color: rgba($color: $secondary-color, $alpha: 0.2);
+    }
+    &:active{
+      transform: translateY(.5px);
+    }
   }
 
   &.btn-secondary {
-    padding: $secondary-btn-padding;
+    padding: var(--secondary-btn-padding);
     background-color: $secondary-color;
+    &:active {
+      transform: translateY(.5px);
+    }
   }
 }
 
 .btn {
   &.dropdown-toggle {
-    color: $text-color;
+    color: $text-color !important;
   }
 }

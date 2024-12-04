@@ -1,16 +1,37 @@
 <header>
-  <h2 class="brand">Dilvant</h2>
-  <nav>
+  <!-- El menú hamburguesa se muestra solo en pantallas pequeñas -->
+  <div class="d-flex brand-title align-items-center">
+    <button *ngIf="isSmallScreen" class="btn-menu d-flex align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul ngbNav class="nav nav-tabs sidebar-nav">
+          <li *ngFor="let item of routesResponse "[ngbNavItem]="item.id" class="nav-link sidebar-li" routerLinkActive="sidebar-active">
+            <a [routerLink]="[item.route]" class="sidebar-a">{{item.title}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <h2 class="brand">Dilvant</h2>
+  </div>
+  <!-- En caso la pantalla no sea pequeña se mostrará el nav normal -->
+  <nav *ngIf="!isSmallScreen">
     <ul ngbNav class="nav nav-tabs">
-      <li ngbNavItem="1" class="nav-link"><a [routerLink]="['/home']" routerLinkActive="active">Inicio</a></li>
-      <li ngbNavItem="2" class="nav-link"><a [routerLink]="['*']" routerLinkActive="active">Menú</a></li>
-      <li ngbNavItem="3" class="nav-link"><a [routerLink]="['*']" routerLinkActive="active">Nosotros</a></li>
-      <li ngbNavItem="4" class="nav-link p-0">
-        <div class="dropdown">
-          <button class="btn dropdown-toggle" type="button" id="dropDownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Reservas
-          </button>
-        </div>
+      <li *ngFor="let item of routesResponse "[ngbNavItem]="item.id" class="nav-link">
+        <a *ngIf="item.type == 'aType'; else buttonType"
+          [routerLink]="[item.route]"
+          routerLinkActive="active">{{item.title}}</a>
+        <ng-template #buttonType>
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropDownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{item.title}}
+            </button>
+          </div>
+        </ng-template>
       </li>
     </ul>
   </nav>

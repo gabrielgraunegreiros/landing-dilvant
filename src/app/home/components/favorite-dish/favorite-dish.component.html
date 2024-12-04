@@ -1,7 +1,8 @@
 <section class="favorite-dish">
   <h1 class="favorite-dish-title">¿Cómo funciona? Elige tu plato favorito.</h1>
+  <!-- Se listan todos los elementos del arreglo mediante un ngFor para no repetir código -->
   <div class="favorite-info">
-    <div *ngFor="let info of favoriteDishesResponse" class="info">
+    <div *ngFor="let info of favoriteDishesResponse" class="info col-12 col-lg-3">
       <div class="info-image">
         <img [src]="info.imgPath" alt="favorite-img">
       </div>

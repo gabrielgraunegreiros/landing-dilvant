@@ -1,3 +1,7 @@
+/* Se utiliza un degradado en conjunto con clip path (al igual que para el new-menu) para poder aplicar la forma necesaria enviando 
+  las coordenadas correspondientes en formato (x y) para darle la forma. Cada coordenada representa un punto por lo que el polígono
+  tendrá tantas aristas como coordenadas se coloque.
+*/
 .background-shape {
   position: absolute;
   overflow: hidden;

@@ -1,10 +1,11 @@
+<!-- Componente reutilizable para las secciones con texto a un lado acompañado de una imagen -->
 <div class="content" [ngClass]="{'revert': position !== 'left'}">
-  <article class="info-article" [ngClass]="{'right': position !== 'left'}">
-    <h1>{{title}}</h1>
-    <p [ngClass]="textClass">{{text}}</p>
+  <article class="info-article col-12" [ngClass]="{'right col-md-6': position !== 'left', 'col-md-7': position == 'left'}">
+    <h1 class="title">{{title}}</h1>
+    <p class="text" [ngClass]="textClass">{{text}}</p>
     <button *ngIf="buttonText" class="btn-custom btn-primary">{{buttonText}}</button>
   </article>
-  <div class="dish-image">
+  <div class="dish-image col-12" [ngClass]="{'right col-md-6': position !== 'left', 'col-md-5': position == 'left'}">
     <img [src]="imgPath" alt="dish-image">
   </div>
 </div>

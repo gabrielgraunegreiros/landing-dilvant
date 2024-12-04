@@ -4,6 +4,8 @@
     gap: 48px;
     .nav-link {
       border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease;
       &:hover {
         transform: translateY(-3px);
       }

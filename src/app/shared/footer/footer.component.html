@@ -1,10 +1,22 @@
 <footer class="footer">
   <div class="footer-info">
-    <h2 class="brand">Dilvant</h2>
-    <ul *ngFor="let list of footerInfo">
-      <p class="list-title">{{list.title}}</p>
-      <li *ngFor="let element of list.elements" class="list-element">{{element}}</li>
-    </ul>
+    <h2 class="brand col-12 col-lg-3">Dilvant</h2>
+    <!-- Para pantallas pequeñas se utiliza otra estructura -->
+    <div *ngIf="isSmallScreen; else normalScreen" class="ul-container">
+      <!-- Se listan todos los elementos del arreglo mediante un ngFor para no repetir código -->
+      <ul *ngFor="let list of footerInfo" class="col-3">
+        <p class="list-title">{{ list.title }}</p>
+        <li *ngFor="let element of list.elements" class="list-element">{{ element }}</li>
+      </ul>
+    </div>
+    <!-- Estructura definida para el footer -->
+    <ng-template #normalScreen>
+      <!-- Se listan todos los elementos del arreglo mediante un ngFor para no repetir código -->
+      <ul *ngFor="let list of footerInfo" class="col-3">
+        <p class="list-title">{{list.title}}</p>
+        <li *ngFor="let element of list.elements" class="list-element">{{element}}</li>
+      </ul>
+    </ng-template>
   </div>
   <hr>
   <div class="copyright">

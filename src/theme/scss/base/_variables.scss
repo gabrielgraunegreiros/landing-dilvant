@@ -1,3 +1,5 @@
+// Definición de variables a utilizar para el proyecto y sus respectivos cambios para el responsive
+
 :root {
   --bg-color: #fff;
   --primary-color: #001405;
@@ -10,6 +12,11 @@
   --hr-color: #334155
 
   --font-family: 'Roboto', sans-serif;
+  --font-size: 1rem;
+  --font-size-multiplier-xl: 3.5;
+  --font-size-multiplier-l: 2.5;
+  --font-size-multiplier-m: 1.5;
+  --font-size-multiplier-sm: 1.25;
 
   --common-padding: 80px;
 
@@ -29,9 +36,38 @@ $secondary-text-color: #000;
 $hr-color: #334155;
 
 $font-family: 'Roboto', sans-serif;
+$font-size: 1rem;
+
+$font-size-multiplier-xl: 3.5;
+$font-size-multiplier-l: 2.5;
+$font-size-multiplier-m: 1.5;
+$font-size-multiplier-sm: 1.25;
 
 $common-padding: 80px;
 
 $primary-btn-padding: 20px 48px;
 $secondary-btn-padding: 12px 28px;
 
+
+@media (max-width: 991px) {
+  :root {
+    --common-padding: 20px;
+    --font-size: 1rem;
+    --font-size-multiplier-xl: 2.5;
+    --font-size-multiplier-l: 1.5;
+    --font-size-multiplier-m: 1.25;
+    --font-size-multiplier-sm: 1;
+
+    --primary-btn-padding: 8px 48px;
+    --secondary-btn-padding: 4px 16px;
+  }
+  
+  $common-padding: 20px;
+  $font-size-multiplier-xl: 2.5;
+  $font-size-multiplier-l: 1.5;
+  $font-size-multiplier-m: 1.25;
+  $font-size-multiplier-sm: 1;
+
+  $primary-btn-padding: 10px 48px;
+  $secondary-btn-padding: 6px 28px;
+}

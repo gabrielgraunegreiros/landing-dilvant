@@ -9,6 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 import { FavoriteDishComponent } from './components/favorite-dish/favorite-dish.component';
 import { UniqueExperienceComponent } from './components/unique-experience/unique-experience.component';
 import { BookTodayComponent } from './components/book-today/book-today.component';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -25,7 +26,8 @@ import { BookTodayComponent } from './components/book-today/book-today.component
   imports: [
     CommonModule,
     SharedModule,
-    MatIconModule
+    MatIconModule,
+    NgbCarouselModule
   ],
   exports: [
     HomeComponent,

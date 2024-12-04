@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './favorite-dish.component.scss'
 })
 export class FavoriteDishComponent {
+  // Datos necesarios para cada uno de los elementos a mostrar
   favoriteDishesResponse = [
     {
       description: 'Ofrecemos platos que combinan tradición y modernidad, diseñados para deleitar tu paladar.',

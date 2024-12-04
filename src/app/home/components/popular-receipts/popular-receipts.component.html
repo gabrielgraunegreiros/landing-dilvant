@@ -1,13 +1,26 @@
 <section class="popular-receipts">
   <div class="popular-receipts-title">
-    <h3 class="title">Recetas Peruanas Populares</h3>
-    <div class="explore">
+    <h3 class="title col-7 col-lg-8">Recetas Peruanas Populares</h3>
+    <div class="explore col-5 col-lg-4">
       <p>Explora Todos los Platos</p>
-      <mat-icon>arrow_forward</mat-icon>
+      <mat-icon class="arrow-icon">arrow_forward</mat-icon>
     </div>
   </div>
-  <div class="popular-receipts-dishes">
-    <article *ngFor="let receipt of receiptsResponse" class="dish" [ngStyle]="{'background-image': 'url(' + receipt.imgPath + ')'}">
+  <!-- Para pantallas pequeñas se utiliza un carousel para evitar la aglomeración de elemento -->
+  <ng-template #showCarousel>
+    <ngb-carousel [interval]="2500" [showNavigationArrows]="false" [showNavigationIndicators]="true" [wrap]="true">
+      <ng-template ngbSlide *ngFor="let receipt of receiptsResponse">
+        <article class="dish col-12 col-lg-2" [ngStyle]="{'background-image': 'url(' + receipt.imgPath + ')'}">
+          <div class="dish-info">
+            <p class="receipt-info-title">{{receipt.title}}</p>
+          </div>
+        </article>
+      </ng-template>
+    </ngb-carousel>
+  </ng-template>
+  <!-- Se listan todos los elementos del arreglo mediante un ngFor para no repetir código -->
+  <div *ngIf="!isSmallScreen; else showCarousel" class="popular-receipts-dishes">
+    <article *ngFor="let receipt of receiptsResponse" class="dish col-12 col-lg-2" [ngStyle]="{'background-image': 'url(' + receipt.imgPath + ')'}">
       <div class="dish-info">
         <p class="receipt-info-title">{{receipt.title}}</p>
       </div>

@@ -7,16 +7,29 @@
 
 .popular-receipts-title {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   color: var(--secondary-text-color);
 }
 
 .explore {
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
   font-weight: 500;
   color: var(--secondary-color);
   gap: 16px;
+  transition: transform 0.5s ease;
+}
+
+// Animación suave para el hover en el texto de explorar
+.explore:hover {
+  transform: translateX(5px);
+}
+
+.carousel-group {
+  display: flex;
+  justify-content: space-between;
 }
 
 .popular-receipts-dishes {
@@ -26,7 +39,6 @@
 }
 
 .dish {
-  width: 236px;
   height: 354px;
   border: 1px solid var(--primary-color);
   border-radius: 5px;
@@ -35,6 +47,7 @@
   background-repeat: no-repeat;
 }
 
+// Efecto ligero de overlay para el texto
 .dish-info {
   height: 50%;
   padding: 24px;
@@ -44,4 +57,27 @@
 .receipt-info-title {
   font-weight: 700;
   font-size: 1.5rem;
+}
+
+@media (max-width: 991px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .explore {
+    font-size: .75rem;
+    gap: 8px;
+  }
+
+  .popular-receipts-dishes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .arrow-icon {
+    font-size: 16px;
+    height: 16px;
+  }
 }

@@ -1,9 +1,16 @@
+.book-today {
+  background-color: var(--primary-color);
+}
+
+/* Se utiliza el clip path y el degradado (al igual que para el new-menu) con las coordenadas necesarias para darle la forma.
+  Para este caso se utiliza un fondo verde y una forma blanca para evitar errores respecto al height
+*/
 .background-shape {
   position: absolute;
   height: 70vh;
   width: 100%;
-  background: linear-gradient(to bottom, var(--primary-color), var(--primary-color));
-  clip-path: polygon(100% 100%, 0% 100%, 3% 44%, 100% 0%);
+  background: linear-gradient(to bottom, #fff, #fff);
+  clip-path: polygon(0% 0%, 100% 0%, 3% 44%, 0% 100%);
   z-index: 0;
 }
 

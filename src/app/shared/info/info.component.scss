@@ -1,6 +1,5 @@
 .content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
   &.revert {
@@ -8,14 +7,49 @@
   }
 }
 
+.text {
+  text-align: justify;
+}
+
 .info-article {
-  max-width: 50%;
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
 .dish-image {
-  border-radius: 63px;
-  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  &.right {
+    justify-content: flex-start;
+  }
+  img {
+    border-radius: 63px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 991px) {
+  .content {
+    flex-direction: column;
+    gap: 20px;
+    &.revert {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  .dish-image {
+    justify-content: center;
+    img {
+      width: 100%;
+    }
+  }
 }
