@@ -1,0 +1,16 @@
+<section class="popular-receipts">
+  <div class="popular-receipts-title">
+    <h3 class="title">Recetas Peruanas Populares</h3>
+    <div class="explore">
+      <p>Explora Todos los Platos</p>
+      <mat-icon>arrow_forward</mat-icon>
+    </div>
+  </div>
+  <div class="popular-receipts-dishes">
+    <article *ngFor="let receipt of receiptsResponse" class="dish" [ngStyle]="{'background-image': 'url(' + receipt.imgPath + ')'}">
+      <div class="dish-info">
+        <p class="receipt-info-title">{{receipt.title}}</p>
+      </div>
+    </article>
+  </div>
+</section>

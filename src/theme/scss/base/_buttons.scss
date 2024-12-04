@@ -1,0 +1,27 @@
+.btn-custom {
+  box-shadow: none;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 50px;
+  color: $text-color;
+  border: 2px solid $secondary-color;
+  width: fit-content;
+
+  &.btn-primary {
+    padding: $primary-btn-padding;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: $secondary-color;
+  }
+
+  &.btn-secondary {
+    padding: $secondary-btn-padding;
+    background-color: $secondary-color;
+  }
+}
+
+.btn {
+  &.dropdown-toggle {
+    color: $text-color;
+  }
+}

@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'theme/scss/core.scss';
+
+body {
+  font-family: $font-family;
+  font-size: 16px;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+h1, h2, h4, h6 {
+  font-weight: 800;
+  margin: 0;
+}
+
+h3, h5 {
+  font-weight: 700;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+header {
+  background-color: $primary-color;
+  padding: 24px $common-padding;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+  &.main-text {
+    font-size: 1.5rem;
+  }
+  &.secondary-text {
+    font-size: 1.25rem;
+  }
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+}

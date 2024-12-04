@@ -1,0 +1,19 @@
+.season-dish {
+  padding: var(--common-padding);
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.season-dish-article {
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.dish-image {
+  border-radius: 63px;
+  overflow: hidden;
+}

@@ -1,0 +1,12 @@
+.nav {
+  &.nav-tabs {
+    border: none;
+    gap: 48px;
+    .nav-link {
+      border: none;
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+}
